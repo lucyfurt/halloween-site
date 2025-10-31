@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  background: linear-gradient(45deg, #ff6600, #cc3300);
+  padding: 80px;
+  color: black;
+  text-shadow: 2px 2px #ffcc00;
+  position: relative;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-family: 'Creepster', cursive;
+}
+
+body {
+  background-color: black;
+  color: orange;
+  font-family: 'Creepster', cursive;
+  text-align: center;
+  margin: 0;
+}
+
+.boas_vindas p {
+  font-size: 48px;
+  text-align: center;
+}
+
+.boas_vindas img {
+  width: 100%;         
+  max-width: 400px;    
+  height: auto;        
+  display: block;      
+  margin: 0 auto; 
+}
+
+.galeria .cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 250px;
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+}
+
+.curiosidades ul {
+  list-style: none;
+  padding: 0;
+}
+
+.curiosidades li {
+  background: #262626;
+  border-left: 5px solid #ff6600;
+  margin: 10px auto;
+  padding: 10px;
+  max-width: 500px;
+}
+
+footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+  border-top: 2px solid #ff6600;
+  font-size: 0.9rem;
+}
+
+.pisca {
+  animation: piscar 1.2s infinite alternate;
+}
+
+@keyframes piscar {
+  from {
+    opacity: 1;
+    color: #000;
+  }
+
+  to {
+    opacity: 0.5;
+    color: #ffcc00;
+  }
+}
+
+.morcego {
+  position: absolute;
+  font-size: 2rem;
+  top: 10%;
+  animation: voar 10s linear infinite;
+  z-index: 1000;
+}
+
+.morcego1 {
+  left: -50px;
+  animation-delay: 0s;
+}
+
+.morcego2 {
+  left: -80px;
+  animation-delay: 3s;
+  top: 30%;
+}
+
+.morcego3 {
+  left: -100px;
+  animation-delay: 6s;
+  top: 60%;
+}
+
+@keyframes voar {
+  0% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: translateX(50vw) translateY(-30px) rotate(20deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(100vw) translateY(0) rotate(-20deg);
+    opacity: 0.8;
+  }
+}
+
+.abobora-animada {
+  width: 300px;
+  animation: brilho 2s infinite alternate ease-in-out, zoom 4s infinite ease-in-out;
+  filter: drop-shadow(0 0 20px orange);
+}
+
+@keyframes brilho {
+  0% {
+    filter: drop-shadow(0 0 5px #ff6600);
+  }
+
+  50% {
+    filter: drop-shadow(0 0 30px #ff9900);
+  }
+
+  100% {
+    filter: drop-shadow(0 0 10px #ff3300);
+  }
+}
+
+@keyframes zoom {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
